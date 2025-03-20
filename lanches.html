@@ -160,10 +160,38 @@
             color: #e74c3c;
             margin-top: 15px;
         }
+       /* Botão de voltar - Centralizado e Estilizado */
+       .botao-voltar {
+            display: inline-block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
 
-       button{
-        text-align: center;
-       }
+        .botao-voltar:hover {
+            background-color: #2980b9;
+            transform: translateY(-5px);
+        }
+
+        .botao-voltar:active {
+            transform: translateY(2px);
+            background-color: #1c6ea4;
+        }
+
+        .botao-voltar-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
     </style>
 </head>
 
@@ -230,9 +258,9 @@
         </div>
     </div>
 
-    <button>
-        <a href="index.html">Voltar!</a>
-    </button>
+    <div class="botao-voltar-container">
+        <a href="index.html" class="botao-voltar">Voltar</a> <!-- Substitua 'index.html' pelo link adequado -->
+    </div>
 </body>
 
 </html>
