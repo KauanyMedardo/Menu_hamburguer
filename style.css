@@ -7,16 +7,22 @@
 
 /* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
 }
 
 /* Cabeçalho */
 header.cabecalho {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 /* Container centralizado */
@@ -32,7 +38,10 @@ header.cabecalho {
 
 /* Título do cabeçalho */
 .container__titulo {
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* Menu hambúrguer */
@@ -45,6 +54,11 @@ header.cabecalho {
     cursor: pointer;
     font-size: 30px;
     padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.container__rotulo:hover {
+    transform: scale(1.1);
 }
 
 .container__imagem {
@@ -58,6 +72,7 @@ header.cabecalho {
 .lista-menu {
     display: flex;
     list-style: none;
+    margin-left: 50px;
 }
 
 .lista-menu__item {
@@ -68,11 +83,14 @@ header.cabecalho {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
-    transition: color 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .lista-menu__link:hover {
     color: #f39c12;
+    transform: translateY(-3px);
 }
 
 /* Responsividade - Menu hambúrguer visível em telas pequenas */
@@ -111,4 +129,23 @@ header.cabecalho {
     .container__rotulo {
         display: block;
     }
+}
+
+/* Estilos para o fundo da página */
+body {
+    background: linear-gradient(135deg, #f39c12, #e74c3c);
+}
+
+/* Animação de entrada no menu */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.lista-menu {
+    animation: slideIn 0.5s ease-out;
 }
